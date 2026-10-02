@@ -154,7 +154,7 @@ function Home() {
           <h2>Nuestros deportes</h2>
 
           <p>
-            Cinco disciplinas para disfrutar, competir y compartir
+            para disfrutar, competir y compartir
             grandes momentos.
           </p>
         </div>
