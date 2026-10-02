@@ -1,0 +1,264 @@
+/* ================================
+   HERO - IMAGEN DE FONDO
+================================ */
+
+.hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("/src/assets/image_principal.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  overflow: hidden;
+  padding: 50px 20px;
+}
+
+/* Oscurecer imagen para mejorar lectura */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 20, 45, 0.80),
+    rgba(0, 0, 0, 0.35)
+  );
+
+  z-index: 1;
+}
+
+/* Encabezado */
+
+.hero-header {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.logo-juegos {
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+
+.hero-titulo-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 20, 45, 0.80),
+    rgba(0, 0, 0, 0.35)
+  );
+
+
+}
+
+.edicion {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #ffd700;
+}
+
+.hero-titulo h1 {
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 800;
+  margin: 10px 0;
+  color:white
+}
+
+.hero-titulo h4 {
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 600;
+  margin: 10px 0;
+  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.7);
+   font-weight: bold;
+  letter-spacing: 4px;
+  color: #ffd700;
+}
+
+
+.hero-titulo-1 h1 {
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 800;
+  margin: 10px 0;
+  color:white
+}
+
+.hero-titulo-1 h4 {
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 600;
+  margin: 10px 0;
+  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.7);
+   font-weight: bold;
+  letter-spacing: 4px;
+  color: #ffd700;
+}
+
+
+.espiritu-olimpico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.espiritu-olimpico h1 {
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 800;
+  margin: 10px 0;
+  color:white
+}
+
+.espiritu-olimpico h4 {
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 600;
+  margin: 10px 0;
+  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.7);
+   font-weight: bold;
+  letter-spacing: 4px;
+  color: #ffd700;
+}
+
+.anio {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+/* Contenido central */
+
+.hero-contenido {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+  max-width: 750px;
+  padding: 20px;
+}
+
+.hero-etiqueta {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+.hero-contenido h2 {
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 800;
+  margin: 10px 0;
+  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-contenido p {
+  font-size: 19px;
+  line-height: 1.6;
+  margin: 15px auto 25px;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Fechas */
+
+.fechas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.fechas span {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 18px;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Botón */
+
+.boton-principal {
+  display: inline-block;
+  padding: 14px 30px;
+
+  background: #ffd700;
+  color: #172b45;
+
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.boton-principal:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 650px;
+    padding: 35px 15px;
+  }
+
+  .hero-header {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .logo-juegos {
+    width: 100px;
+  }
+
+  .hero-contenido p {
+    font-size: 16px;
+  }
+
+  .fechas {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .fechas span {
+    font-size: 15px;
+    padding: 8px 12px;
+  }
+
+}
