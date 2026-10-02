@@ -9,7 +9,14 @@ import polideportivo from "/src/assets/polideportivo.png";
 import voley from "/src/assets/voley.png";
 import bochas from "/src/assets/bochas.png";
 import nortecd from "/src/assets/nortecd.png";
+import marcelogonzalez from "/src/assets/marcelo_gonzalez.jpeg";
+import ingemar from "/src/assets/ingemar.jpeg";
+import geologodasilva from "/src/assets/geologo.jpeg";
+import corblock from "/src/assets/corblock1.jpeg";
 
+import ciec from "/src/assets/ciec.jpeg";
+import lomitos348 from "/src/assets/lomitos348.png";
+import carmelo from "/src/assets/carmelo.jpeg";
 
 
 const deportes = [
@@ -44,6 +51,53 @@ const deportes = [
     descripcion: "Varemos que ponemos."
   }
 ];
+
+const sponsores = [
+   {
+    nombre: "CORBLOCK",
+    imagen: corblock,
+    descripcion: "empresa líder en la fabricación de premodelados y pretensados de hormigón.",
+    link: "https://www.corblock.com/"
+  },
+  {
+    nombre: "Ingemar",
+    imagen: ingemar,
+    descripcion: "...es una empresa cordobesa con más de 25 años de trayectoria dedicada a la provisión y fabricación de materiales para obras de infraestructura urbana en Argentina.",
+    link: "https://ingemar.com.ar/",
+  },
+  {
+    nombre: "MARCELO GONZALEZ - NEGOCIOS INMOBILIARIOS",
+    imagen: marcelogonzalez,
+    descripcion: "Negocios Inmobiliarios es una inmobiliaria de la ciudad de Córdoba. Alquila y Vende casa, departamento, campo y todo tipo de Inmuebles.",
+    link: "https://www.mginmobiliaria.com.ar/",
+  },
+  {
+    nombre: "GEÓLOGO - RICARDO DA SILVA",
+    imagen: geologodasilva,
+    descripcion: "geólogo matriculado en la Provincia de Córdoba, especialista en geotecnia y estudios de suelos. Ofrece servicios profesionales de perforaciones, pilotes y fundaciones en la región",
+    link: "https://www.facebook.com/p/Ge%C3%B3logo-da-Silva-100057185032021/?locale=es_LA"
+  },
+  {
+    nombre: "LOMITOS 348",
+    imagen: lomitos348,
+    descripcion: "...Lomitos, Sandwiches, Pizzas y más. Conocé nuestra carta de productos...Estamos presentes en los distintos barrios de la Ciudad de Córdoba. Y también en Carlos Paz.",
+    link: "https://www.lomitos348.com/",
+  },
+  {
+    nombre: "CARMELO",
+    imagen: carmelo,
+    descripcion: "...es un clásico bodegón y restaurante familiar de la Zona Norte de Córdoba con más de 40 años de trayectoria, conocido por su modalidad de diente libre (con más de 70 variedades de platos) y comida por kilo.",
+    link: "https://www.instagram.com/carmelorestaurant/?hl=es",
+  },
+  {
+    nombre: "CIEC - ",
+    imagen: ciec,
+    descripcion: "El CIEC, aúna las profesiones de Ingenieros Mecánicos, Electricistas, Químicos, Laborales, Aeronáuticos, Informáticos, ampliado a otras disciplinas que se desarrollaron a la luz del avance tecnológico.",
+    link: "https://www.ciec.com.ar/"
+  }
+ 
+];
+
 
 
 function Home() {
@@ -96,8 +150,48 @@ function Home() {
 
 </section>
 
+{/* SPONSORES */}
       
+<section className="deportes" id="deportes">
+        <div className="espiritu-olimpico">
+          <h4 >NUESTROS SPONSORES</h4>
 
+          <h2>gracias por confiar en nuestros juegos.</h2>
+          <hr />
+
+        </div>
+
+        <div className="sponsor-grid">
+          
+        {sponsores.map((sponsor) => (
+          <article className="deporte-card" key={sponsor.nombre}>
+            <div className="sponsor-imagen">
+              <img
+                src={sponsor.imagen}
+                alt={sponsor.nombre}
+                loading="lazy"
+              />
+            </div>
+
+            <div className="deporte-info">
+              <h3>{sponsor.nombre}</h3>
+              <p>{sponsor.descripcion}</p>
+
+              {sponsor.link && (
+                <a
+                  href={sponsor.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visitar sitio web
+                </a>
+              )}
+            </div>
+          </article>
+        ))}
+
+        </div>
+      </section>
       {/* LUGAR */}
       <section className="lugar" id="lugar">
         <div className="lugar-contenido">

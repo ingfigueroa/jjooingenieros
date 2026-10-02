@@ -114,6 +114,31 @@
   margin: auto;
 }
 
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.sponsor-imagen {
+  
+  object-fit: cover;
+  transition: 0.4s;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;    /* Centra verticalmente */
+  
+}
+
+.sponsor-imagen img {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
 .deporte-card {
   background: white;
   border-radius: 10px;
@@ -657,4 +682,6 @@
     gap: 8px;
   }
 
-}}
+}
+
+}
