@@ -2,39 +2,48 @@
 import "/src/css/home.css";
 import "/src/css/home1.css";
 
+import futbol from "/src/assets/futbol.png";
+import padel from "/src/assets/padel.png";
+import natacion from "/src/assets/natacion.png";
+import polideportivo from "/src/assets/polideportivo.png";
+import voley from "/src/assets/voley.png";
+import bochas from "/src/assets/bochas.png";
+
+
 
 const deportes = [
   {
     nombre: "Fútbol",
-    imagen: "/src/assets/futbol.png",
+    imagen: futbol,
     descripcion: "Pasión, equipo y competencia."
   },
   {
     nombre: "Pádel",
-    imagen: "/src/assets/padel.png",
+    imagen: padel,
     descripcion: "Estrategia y compañerismo."
   },
   {
     nombre: "Natación",
-    imagen: "/src/assets/natacion.png",
+    imagen: natacion,
     descripcion: "Superación en cada brazada."
   },
   {
     nombre: "Básquet",
-    imagen: "/src/assets/polideportivo.png",
+    imagen: polideportivo,
     descripcion: "Trabajo en equipo y precisión."
   },
   {
     nombre: "Vóley",
-    imagen: "/src/assets/voley.png",
-    descripcion: "Un deporte que nos une."  
+    imagen: voley,
+    descripcion: "Un deporte que nos une."
   },
-   {
+  {
     nombre: "Bochas",
-    imagen: "/src/assets/bochas.png",
-    descripcion: "Varemos que ponemos"
+    imagen: bochas,
+    descripcion: "Varemos que ponemos."
   }
 ];
+
 
 function Home() {
   return (
