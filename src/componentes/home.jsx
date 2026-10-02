@@ -8,6 +8,7 @@ import natacion from "/src/assets/natacion.png";
 import polideportivo from "/src/assets/polideportivo.png";
 import voley from "/src/assets/voley.png";
 import bochas from "/src/assets/bochas.png";
+import nortecd from "/src/assets/nortecd.png";
 
 
 
@@ -140,7 +141,7 @@ function Home() {
 
         <div className="lugar-imagen">
           <img
-            src="/src/assets/nortecd.png"
+            src= {nortecd}
             alt="Complejo El Norte CD"
           />
         </div>
