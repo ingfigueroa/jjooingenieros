@@ -8,7 +8,14 @@ import natacion from "/src/assets/natacion.png";
 import polideportivo from "/src/assets/polideportivo.png";
 import voley from "/src/assets/voley.png";
 import bochas from "/src/assets/bochas.png";
+import tenis from "/src/assets/tenis.png";
+import atletismo from "/src/assets/atletismo.png";
+import ajedrez from "/src/assets/ajedrez.png";
+
+
 import nortecd from "/src/assets/nortecd.png";
+
+
 import marcelogonzalez from "/src/assets/marcelo_gonzalez.jpeg";
 import ingemar from "/src/assets/ingemar.jpeg";
 import geologodasilva from "/src/assets/geologo.jpeg";
@@ -16,7 +23,9 @@ import corblock from "/src/assets/corblock1.jpeg";
 
 import ciec from "/src/assets/ciec.jpeg";
 import lomitos348 from "/src/assets/lomitos348.png";
-import carmelo from "/src/assets/carmelo.jpeg";
+import apesa from "/src/assets/apesa.jpeg";
+import iec from "/src/assets/iec.jpeg";
+import tiranti from "/src/assets/tiranti.jpeg";
 
 
 const deportes = [
@@ -48,23 +57,58 @@ const deportes = [
   {
     nombre: "Bochas",
     imagen: bochas,
-    descripcion: "Varemos que ponemos."
+    descripcion: "."
+  },
+  {
+    nombre: "Tenis",
+    imagen: tenis,
+    descripcion: "."
+  },
+  {
+    nombre: "Atletismo",
+    imagen: atletismo,
+    descripcion: "."
+  },
+  {
+    nombre: "Ajedrez",
+    imagen: ajedrez,
+    descripcion: "."
   }
 ];
 
 const sponsores = [
+  {
+    nombre: "INGEMAR",
+    imagen: ingemar,
+    descripcion: "...es una empresa cordobesa con más de 25 años de trayectoria dedicada a la provisión y fabricación de materiales para obras de infraestructura urbana en Argentina.",
+    link: "https://ingemar.com.ar/",
+  },
+  {
+    nombre: "APESA",
+    imagen: apesa,
+    descripcion: "...empresa de larga trayectoria en la construcción de Obras de gran envergadura y hemos establecido exigentes normas de desempeño y comportamiento ético con el pasar de los años.",
+    link: "https://www.apesa.com.ar/",
+  },
+  {
+    nombre: "IEC",
+    imagen: iec,
+    descripcion: "...empresa referente en el mercado local que brinda servicios de mantenimiento y reparaciones Electricas en Edificios, Fabricas y Plantas Industriales, Nuevas Instalaciones Eléctricas en Plantas Industriales y Edificios de Viviendas...",
+    link: "https://iecsrl.com.ar/",
+  },
    {
     nombre: "CORBLOCK",
     imagen: corblock,
     descripcion: "empresa líder en la fabricación de premodelados y pretensados de hormigón.",
     link: "https://www.corblock.com/"
   },
+  
   {
-    nombre: "Ingemar",
-    imagen: ingemar,
-    descripcion: "...es una empresa cordobesa con más de 25 años de trayectoria dedicada a la provisión y fabricación de materiales para obras de infraestructura urbana en Argentina.",
-    link: "https://ingemar.com.ar/",
+    nombre: "GEÓLOGO - RICARDO DA SILVA",
+    imagen: geologodasilva,
+    descripcion: "geólogo matriculado en la Provincia de Córdoba, especialista en geotecnia y estudios de suelos. Ofrece servicios profesionales de perforaciones, pilotes y fundaciones en la región",
+    link: "https://www.facebook.com/p/Ge%C3%B3logo-da-Silva-100057185032021/?locale=es_LA"
   },
+  
   {
     nombre: "MARCELO GONZALEZ - NEGOCIOS INMOBILIARIOS",
     imagen: marcelogonzalez,
@@ -72,22 +116,16 @@ const sponsores = [
     link: "https://www.mginmobiliaria.com.ar/",
   },
   {
-    nombre: "GEÓLOGO - RICARDO DA SILVA",
-    imagen: geologodasilva,
-    descripcion: "geólogo matriculado en la Provincia de Córdoba, especialista en geotecnia y estudios de suelos. Ofrece servicios profesionales de perforaciones, pilotes y fundaciones en la región",
-    link: "https://www.facebook.com/p/Ge%C3%B3logo-da-Silva-100057185032021/?locale=es_LA"
-  },
-  {
     nombre: "LOMITOS 348",
     imagen: lomitos348,
     descripcion: "...Lomitos, Sandwiches, Pizzas y más. Conocé nuestra carta de productos...Estamos presentes en los distintos barrios de la Ciudad de Córdoba. Y también en Carlos Paz.",
     link: "https://www.lomitos348.com/",
   },
-  {
-    nombre: "CARMELO",
-    imagen: carmelo,
-    descripcion: "...es un clásico bodegón y restaurante familiar de la Zona Norte de Córdoba con más de 40 años de trayectoria, conocido por su modalidad de diente libre (con más de 70 variedades de platos) y comida por kilo.",
-    link: "https://www.instagram.com/carmelorestaurant/?hl=es",
+    {
+    nombre: "TIRANTI",
+    imagen: tiranti,
+    descripcion: "...empresa que consta de 50 años de trayectoria, en la elaboración de pastas secas, y con una reciente incorporación de la molienda de trigo pan para uso de panificación, con excelencia en entrega y calidad.",
+    link: "https://fideostiranti.com.ar/",
   },
   {
     nombre: "CIEC - ",
@@ -119,6 +157,9 @@ function Home() {
       <h4> 38° EDICIÓN</h4>
       <h1>Juegos Olímpicos de Ingenieros</h1>
       <h4>2026</h4>
+       <a href="#deportes" className="boton-principal">
+      Conocé los deportes
+    </a>
     </div>
 
   </header>
@@ -137,22 +178,48 @@ function Home() {
     </p>
 
     <div className="fechas">
-      <span>7 al 11</span>
+      <span>8 al 10</span>
       <span>OCTUBRE</span>
       <span>2026</span>
     </div>
 
-    <a href="#deportes" className="boton-principal">
-      Conocé los deportes
+   
+
+      <a href="#sponsores" className="boton-principal">
+      Nuestros sponsores
     </a>
 
   </div>
+
+
+</section>
+
+
+
+ <section className="hero-titulo-1">
+       
+      
+    
+  <h1>¡Sumate a los Juegos Olímpicos!</h1>
+
+  <h4 >
+    Completá el formulario y realizá tu preinscripción: <a
+    href="https://forms.gle/eEovrCfyA4VB2iNZ6"
+    target="_blank"
+    rel="noopener noreferrer"
+   className="boton-principal"
+  >
+    Hacelo desde aca.
+  </a>
+  </h4>
+
+  
 
 </section>
 
 {/* SPONSORES */}
       
-<section className="deportes" id="deportes">
+<section className="deportes" id="sponsores">
         <div className="espiritu-olimpico">
           <h4 >NUESTROS SPONSORES</h4>
 
@@ -257,17 +324,18 @@ function Home() {
         <div className="deportes-grid">
           {deportes.map((deporte) => (
             <article className="deporte-card" key={deporte.nombre}>
+              
+
+              <div className="deporte-info">
+                <h3>{deporte.nombre}</h3>
+                
+              </div>
               <div className="deporte-imagen">
                 <img
                   src={deporte.imagen}
                   alt={`Cancha de ${deporte.nombre} en El Norte CD`}
                   loading="lazy"
                 />
-              </div>
-
-              <div className="deporte-info">
-                <h3>{deporte.nombre}</h3>
-                <p>{deporte.descripcion}</p>
               </div>
             </article>
           ))}
