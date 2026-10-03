@@ -1,6 +1,10 @@
+//import { useState, useEffect } from "react";
 
-import "/src/css/home.css";
+
 import "/src/css/home1.css";
+import "/src/css/home.css";
+
+
 
 import futbol from "/src/assets/futbol.png";
 import padel from "/src/assets/padel.png";
@@ -11,9 +15,11 @@ import bochas from "/src/assets/bochas.png";
 import tenis from "/src/assets/tenis.png";
 import atletismo from "/src/assets/atletismo.png";
 import ajedrez from "/src/assets/ajedrez.png";
-
-
+import golf from "/src/assets/golf.png";
 import nortecd from "/src/assets/nortecd.png";
+
+
+
 
 
 import marcelogonzalez from "/src/assets/marcelo_gonzalez.jpeg";
@@ -26,6 +32,10 @@ import lomitos348 from "/src/assets/lomitos348.png";
 import apesa from "/src/assets/apesa.jpeg";
 import iec from "/src/assets/iec.jpeg";
 import tiranti from "/src/assets/tiranti.jpeg";
+import carmelo from "/src/assets/carmelo.jpeg";
+import colegiociviles from "/src/assets/colegiociviles.jpeg";
+
+import suarez from "/src/assets/suarez.png";
 
 
 const deportes = [
@@ -73,6 +83,11 @@ const deportes = [
     nombre: "Ajedrez",
     imagen: ajedrez,
     descripcion: "."
+  },
+  {
+    nombre: "Golf",
+    imagen: golf,
+    descripcion: "."
   }
 ];
 
@@ -101,7 +116,18 @@ const sponsores = [
     descripcion: "empresa líder en la fabricación de premodelados y pretensados de hormigón.",
     link: "https://www.corblock.com/"
   },
-  
+   {
+    nombre: "CIEC - ",
+    imagen: ciec,
+    descripcion: "El CIEC, aúna las profesiones de Ingenieros Mecánicos, Electricistas, Químicos, Laborales, Aeronáuticos, Informáticos, ampliado a otras disciplinas que se desarrollaron a la luz del avance tecnológico.",
+    link: "https://www.ciec.com.ar/"
+  },
+  {
+    nombre: "Colegio de Ingenieros Civiles de Córdoba",
+    imagen: colegiociviles,
+    descripcion: "...ejerce por delegación del Estado, el control de la matrícula, del ejercicio y de la ética profesional, promoviendo, además, la acción social y cultural entre sus matriculados. Agrupa a más de 3.000 ingenieros graduados de las Universidades Nacionales y privadas...",
+    link: "https://civiles.org.ar/"
+  },
   {
     nombre: "GEÓLOGO - RICARDO DA SILVA",
     imagen: geologodasilva,
@@ -127,11 +153,19 @@ const sponsores = [
     descripcion: "...empresa que consta de 50 años de trayectoria, en la elaboración de pastas secas, y con una reciente incorporación de la molienda de trigo pan para uso de panificación, con excelencia en entrega y calidad.",
     link: "https://fideostiranti.com.ar/",
   },
-  {
-    nombre: "CIEC - ",
-    imagen: ciec,
-    descripcion: "El CIEC, aúna las profesiones de Ingenieros Mecánicos, Electricistas, Químicos, Laborales, Aeronáuticos, Informáticos, ampliado a otras disciplinas que se desarrollaron a la luz del avance tecnológico.",
-    link: "https://www.ciec.com.ar/"
+ 
+    {
+    nombre: "CARMELO",
+    imagen: carmelo,
+    descripcion: "...clásico bodegón familiar en Córdoba conocido por su opción de diente libre con más de 70 variedades de platos y su modalidad de comida por kilo.",
+    link: "https://www.instagram.com/carmelorestaurant/?hl=es",
+  },
+  
+    {
+    nombre: "PERIMETRALES SUAREZ",
+    imagen: suarez,
+    descripcion: "Fabrica e instalación de Cercos Perimetrales en Córdoba atendida por sus dueños Brindamos asesoramiento personalizado gratuito adaptando nuestros productos.",
+    link: "https://www.instagram.com/perimetralessuarez.cba/",
   }
  
 ];
@@ -139,6 +173,11 @@ const sponsores = [
 
 
 function Home() {
+
+
+
+  
+
   return (
     <main className="home">
 
@@ -213,6 +252,8 @@ function Home() {
   </a>
   </h4>
 
+ 
+
   
 
 </section>
@@ -259,9 +300,10 @@ function Home() {
 
         </div>
       </section>
+
       {/* LUGAR */}
       <section className="lugar" id="lugar">
-        <div className="lugar-contenido">
+        <div className="espiritu-olimpico">
           <span className="subtitulo">EL ESCENARIO DEL ENCUENTRO</span>
 
           <h2>Un lugar para compartir</h2>
@@ -300,14 +342,14 @@ function Home() {
           </a>
         </div>
 
-        <div className="lugar-imagen">
-          <img
-            src= {nortecd}
-            alt="Complejo El Norte CD"
-          />
-        </div>
+         <div className="deporte-imagen">
+            <img
+                  src={nortecd}
+                 
+                  
+                />
+  </div>
       </section>
-
       {/* DEPORTES */}
       <section className="deportes" id="deportes">
         <div className="espiritu-olimpico">
@@ -406,9 +448,10 @@ function Home() {
           <span>Deporte y amistad</span>
         </div>
       </footer>
-
     </main>
+    
   );
+  
 }
 
 export default Home;

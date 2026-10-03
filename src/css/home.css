@@ -20,8 +20,8 @@
 
 .lugar {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 55px;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 35px;
   align-items: center;
   max-width: 1200px;
   margin: auto;
@@ -341,11 +341,6 @@
     padding: 55px 20px;
   }
 
-  .lugar {
-    grid-template-columns: 1fr;
-    padding: 65px 22px;
-    gap: 30px;
-  }
 
   .lugar-imagen {
     height: 260px;
@@ -849,5 +844,6 @@
     font-size: 14px;
   }
 }
+
 
 }
