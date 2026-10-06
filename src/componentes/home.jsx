@@ -139,7 +139,7 @@ const sponsores = [
     nombre: "MARCELO GONZALEZ - NEGOCIOS INMOBILIARIOS",
     imagen: marcelogonzalez,
     descripcion: "Negocios Inmobiliarios es una inmobiliaria de la ciudad de Córdoba. Alquila y Vende casa, departamento, campo y todo tipo de Inmuebles.",
-    link: "https://www.mginmobiliaria.com.ar/",
+    link: "https://clasificados.lavoz.com.ar/sitio/marcelogonzalez?gad_source=1&gad_campaignid=23389384538&gclid=CjwKCAjwlY3WBhANEiwApsNrLQfhtKuhu76T92ruhVs8JRxu7uJq4iBd5PYhr1VdjP66gBiQ74v7phoCltQQAvD_BwE",
   },
   {
     nombre: "LOMITOS 348",
@@ -181,8 +181,7 @@ function Home() {
   return (
     <main className="home">
 
-      {/* BIENVENIDA */}
-     {/* BIENVENIDA */}
+       {/* BIENVENIDA */}
 <section className="hero">
 
   {/* Imagen de fondo */}
@@ -391,6 +390,30 @@ function Home() {
           38° Juegos Olímpicos de Ingenieros · 2026
         </h4>
       </section>
+
+      
+ <section className="hero-titulo-1">
+       
+      
+    
+  <h1>¡Sumate a los Juegos Olímpicos!</h1>
+
+  <h4 >
+    Completá el formulario y realizá tu preinscripción: <a
+    href="https://forms.gle/eEovrCfyA4VB2iNZ6"
+    target="_blank"
+    rel="noopener noreferrer"
+   className="boton-principal"
+  >
+    Hacelo desde aca.
+  </a>
+  </h4>
+
+ 
+
+  
+
+</section>
 
       {/* FOOTER */}
       <footer className="footer">
