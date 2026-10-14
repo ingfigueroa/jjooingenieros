@@ -22,6 +22,7 @@ import nortecd from "/src/assets/nortecd.png";
 
 
 
+
 import marcelogonzalez from "/src/assets/marcelo_gonzalez.jpeg";
 import ingemar from "/src/assets/ingemar.jpeg";
 import geologodasilva from "/src/assets/geologo.jpeg";
@@ -180,6 +181,8 @@ function Home() {
 
   return (
     <main className="home">
+    
+  
 
        {/* BIENVENIDA */}
 <section className="hero">
@@ -187,54 +190,69 @@ function Home() {
   {/* Imagen de fondo */}
   <div className="hero-overlay"></div>
 
+ {/* Video de fondo */}
+ 
+<video
+  className="hero-video"
+  autoPlay
+  muted
+  loop
+  playsInline
+>
+  <source
+    src="/videos/juegos2026.mp4"
+    type="video/mp4"
+  />
+</video>
+
+  {/* Capa oscura para que se lean los textos */}
+  <div className="hero-overlay"></div>
   <header className="hero-header">
 
-  
-
     <div className="hero-titulo">
-      <h4> 38° EDICIÓN</h4>
-      <h1>Juegos Olímpicos de Ingenieros</h1>
+      <h4>38° EDICIÓN</h4>
+      <h4>Juegos Olímpicos de Ingenieros</h4>
       <h4>2026</h4>
-       <a href="#deportes" className="boton-principal">
-      Conocé los deportes
-    </a>
+
+     
     </div>
 
   </header>
 
   <div className="hero-contenido">
 
-    <span className="hero-etiqueta">
+    {/* <span className="hero-etiqueta">
       DEPORTE · AMISTAD · ENCUENTRO
     </span>
+ */}
 
-    <h2>¡Bienvenidos!</h2>
-
-    <p>
-      Nos encontramos para compartir una nueva edición
-      de los Juegos Olímpicos de Ingenieros.
-    </p>
-
-    <div className="fechas">
+  <div className="fechas">
       <span>8 al 10</span>
       <span>OCTUBRE</span>
       <span>2026</span>
     </div>
+    <h2>¡Gracias por participar!</h2>
 
-   
 
-      <a href="#sponsores" className="boton-principal">
+   <div>
+<a href="#sponsores" className="boton-principal">
       Nuestros sponsores
     </a>
+     <a href="#deportes" className="boton-principal">
+        Conocé los deportes
+      </a>
+
+   </div>
+
+    
 
   </div>
-
 
 </section>
 
 
 
- <section className="hero-titulo-1">
+{/*  <section className="hero-titulo-1">
        
       
     
@@ -255,7 +273,7 @@ function Home() {
 
   
 
-</section>
+</section> */}
 
 {/* SPONSORES */}
       
@@ -385,9 +403,9 @@ function Home() {
 
       {/* CIERRE */}
       <section className="hero-titulo-1">
-        <h1>¡Nos encontramos en octubre!</h1>
+        <h1>¡Nos encontramos en 2027!</h1>
         <h4>
-          38° Juegos Olímpicos de Ingenieros · 2026
+         en los 39° Juegos Olímpicos de Ingenieros · 2027
         </h4>
       </section>
 
@@ -395,7 +413,7 @@ function Home() {
  <section className="hero-titulo-1">
        
       
-    
+   {/*  
   <h1>¡Sumate a los Juegos Olímpicos!</h1>
 
   <h4 >
@@ -407,7 +425,7 @@ function Home() {
   >
     Hacelo desde aca.
   </a>
-  </h4>
+  </h4> */}
 
  
 
