@@ -628,6 +628,9 @@
 }
 
 
+.descripcion {
+  white-space: pre-line;
+}
 
 
 /* CELULARES */
@@ -655,6 +658,7 @@
   }
 
 }
+
 
 /* ==========================================
    SPONSORS - DISEÑO COMPACTO

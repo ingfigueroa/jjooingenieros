@@ -1,5 +1,8 @@
 //import { useState, useEffect } from "react";
 
+import { useState, useEffect } from "react";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 import "/src/css/home1.css";
 import "/src/css/home.css";
@@ -37,6 +40,9 @@ import carmelo from "/src/assets/carmelo.jpeg";
 import colegiociviles from "/src/assets/colegiociviles.jpeg";
 
 import suarez from "/src/assets/suarez.png";
+
+//informacion
+import forumpyme from "/src/assets/forum-pyme.png";
 
 
 const deportes = [
@@ -171,15 +177,36 @@ const sponsores = [
  
 ];
 
+const informacion = [
+  {
+   
+    
+  nombre: "FORUM PYMES",
+  imagen: forumpyme,
+  descripcion: "📣 ¡Te invitamos SIN CARGO a la IV edición del Fórum PyME! Una jornada EXCLUSIVA PARA EMPRESARIOS/AS PYMES para conectar con referentes, compartir ideas y generar nuevas oportunidades.\n📅 3 de noviembre de 2026 📍 Hotel Quinto Centenario, Córdoba\n\n🕗 Parte 1: de 8:00 a 13:00\n🕑 Parte 2: de 14:30 a 18:00\n\n☕ Tu invitación INCLUYE Coffee Break y Networking Lunch.\n\n📝 Preinscripción OBLIGATORIA\n\n⚠️ La preinscripción está SUJETA A APROBACIÓN. Esperá el email que confirme la aprobación de tu inscripción. Se priorizará el ingreso de empresarios/as, socios/as y gerentes generales de PyMEs.\n\n¡Te esperamos!",
+  linkPreinscripcion: "https://forms.gle/73UZ6Dpd6zKFo5m57",
+  link: "https://mpm.org.ar/forum-pyme-2026/"
+
+   
+  },
+
+];
+
 
 
 function Home() {
 
+const [mostrarModal, setMostrarModal] = useState(false);
 
+useEffect(() => {
+  setMostrarModal(true);
+}, []);
 
   
 
   return (
+
+    
     <main className="home">
     
   
@@ -240,6 +267,10 @@ function Home() {
     </a>
      <a href="#deportes" className="boton-principal">
         Conocé los deportes
+      </a>
+
+       <a href="#informacion" className="boton-principal">
+       Información
       </a>
 
    </div>
@@ -305,6 +336,59 @@ function Home() {
               {sponsor.link && (
                 <a
                   href={sponsor.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visitar sitio web
+                </a>
+              )}
+            </div>
+          </article>
+        ))}
+
+        </div>
+      </section>
+
+      <section className="informacion-varias" id="informacion">
+        <div className="espiritu-olimpico">
+          <h4 >INFORMACION</h4>
+
+          <h2>Compartimos información que nos proveen nuestros colegas.</h2>
+          <hr />
+
+        </div>
+
+        <div className="sponsor-grid">
+          
+        {informacion.map((info) => (
+          <article className="deporte-card" key={info.nombre}>
+            <div className="sponsor-imagen">
+              <img
+                src={info.imagen}
+                alt={info.nombre}
+                loading="lazy"
+              />
+            </div>
+
+            <div className="deporte-info">
+              <h3>{info.nombre}</h3>
+            <p style={{ whiteSpace: "pre-line" }}>
+  {info.descripcion}
+</p>
+<p>
+  
+<a
+  href={info.linkPreinscripcion}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  📝 Completar preinscripción en este link
+</a>
+</p>
+
+              {info.link && (
+                <a
+                  href={info.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -400,6 +484,8 @@ function Home() {
           ))}
         </div>
       </section>
+      
+
 
       {/* CIERRE */}
       <section className="hero-titulo-1">
@@ -489,8 +575,80 @@ function Home() {
           <span>Deporte y amistad</span>
         </div>
       </footer>
+      <Modal
+  show={mostrarModal}
+  onHide={() => setMostrarModal(false)}
+  centered
+>
+  <Modal.Header closeButton>
+    <Modal.Title>Información</Modal.Title>
+  </Modal.Header>
+
+  <Modal.Body>
+    
+        <div className="espiritu-olimpico">
+          <h4 >IV Fórum PyME</h4>
+
+          <h2 style={{alignItems:"center"}}>¡Te invitamos SIN CARGO a la IV edición del Fórum PyME!</h2>
+          <hr />
+
+        </div>
+
+        <div className="">
+          
+        {informacion.map((info) => (
+          <article className="deporte-card" key={info.nombre}>
+            <div className="sponsor-imagen">
+              <img
+                src={info.imagen}
+                alt={info.nombre}
+                loading="lazy"
+              />
+            </div>
+
+            <div className="deporte-info">
+              <h3>{info.nombre}</h3>
+  
+
+              {info.link && (
+                <a
+                  href={info.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visitar sitio web
+                </a>
+              )}
+            </div>
+          </article>
+        ))}
+
+        </div>
+      
+  </Modal.Body>
+
+  <Modal.Footer>
+    <Button
+      variant="secondary"
+      onClick={() => setMostrarModal(false)}
+    >
+      Cerrar
+    </Button>
+
+    <Button
+      variant="primary"
+      href="https://forms.gle/73UZ6Dpd6zKFo5m57"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Preinscribirme
+    </Button>
+  </Modal.Footer>
+</Modal>
     </main>
     
+  
+  
   );
   
 }
